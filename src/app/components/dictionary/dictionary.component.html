@@ -1,0 +1,9 @@
+<h2>Dictionar:</h2>
+<app-add-word></app-add-word>
+<ng-container *ngIf="dictionary$ | async as dictionary">
+  <div class="content">
+    <div *ngFor="let word of dictionary">
+      <app-word [value]="word" (click)="removeWord(word)"></app-word>
+    </div>
+  </div>
+</ng-container>

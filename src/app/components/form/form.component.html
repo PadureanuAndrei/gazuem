@@ -1,0 +1,13 @@
+<h2>Selecteaza:</h2>
+<form>
+  <div class="count">
+    <label>Numar de cuvinte: </label>
+    <input type="number" [formControl]="countControl">
+  </div>
+
+  <button (click)="shuffle()">Shuffle</button>
+</form>
+
+<div *ngIf="values?.length">
+  {{ values }}
+</div>
